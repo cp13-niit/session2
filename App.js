@@ -21,20 +21,30 @@ export default class App extends React.Component {
   }
 
   render() {
-    var sayHi = "helloword";
     return (
-      <View style={styles.container}>
-        <Text style={{ fontSize: 50 }}>{this.state.count}</Text>
-      </View>
+      <View style={{ flexDirection: 'column', justifyContent: 'space-evenly', alignItems: 'stretch', height: '100%', width: '100%' }}>
+        <View style={styles.box1}><Text>Box1</Text></View>
+        <View style={styles.box2}><Text>Box2</Text></View>
+        <View style={styles.box3}><Text>Box3</Text></View>
+      </View >
     );
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+  box1: {
+    backgroundColor: 'red',
+    width: 50,
+    height: 50
   },
+  box2: {
+    backgroundColor: 'blue',
+    width: 50,
+    height: 50
+  },
+  box3: {
+    backgroundColor: 'green',
+    width: 50,
+    height: 50
+  }
 });
